@@ -6,7 +6,8 @@ body {
   padding: 40px;
 }
 .container {
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   background: white;
   padding: 30px;
   border-radius: 20px;
@@ -80,4 +81,100 @@ td {
 th {
   background: #f4f7f6;
   color: #636e72;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+  }
+  .stats {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .card {
+    flex: 1 1 45%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  .form-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-section input,
+  .form-section button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  .form-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  input {
+    padding: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+  th,
+  td {
+    padding: 10px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .stats {
+    gap: 5px;
+  }
+  .card {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .form-section {
+    padding: 15px;
+    gap: 10px;
+  }
+  input {
+    padding: 8px;
+  }
+  button {
+    padding: 8px 15px;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
 }
