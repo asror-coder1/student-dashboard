@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>CRM System - Student Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Dashboard</h1>
+
+      <div class="stats">
+        <div class="card">Jami O'quvchilar: <span id="userCount">0</span></div>
+        <div class="card">Natijalar: <span id="resultCount">0</span></div>
+      </div>
+
+      <div
+        class="form-section"
+        style="display: flex; flex-direction: column; gap: 10px"
+      >
+        <div style="display: flex; gap: 10px">
+          <input type="text" id="fName" placeholder="Ism" />
+          <input type="text" id="lName" placeholder="Familiya" />
+        </div>
+        <div style="display: flex; gap: 10px">
+          <input type="number" id="userAge" placeholder="Yosh" />
+          <input type="text" id="userPhone" placeholder="Telefon (+998...)" />
+        </div>
+        <div style="display: flex; gap: 10px">
+          <input type="text" id="userAddress" placeholder="Manzil" />
+          <select
+            id="userGender"
+            style="padding: 10px; border-radius: 8px; border: 2px solid #ddd"
+          >
+            <option value="MALE">Tanlang</option>
+            <option value="MALE">Erkak</option>
+            <option value="FEMALE">Ayol</option>
+          </select>
+        </div>
+        <button id="submitBtn" class="btn-main" onclick="handleSave()">
+          Qo'shish
+        </button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>F.I.SH</th>
+            <th>Amallar</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
