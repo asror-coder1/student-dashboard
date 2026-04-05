@@ -25,14 +25,13 @@ async function refresh() {
 }
 
 async function handleSave() {
-  // Inputlardan ma'lumotni yig'amiz
   const userData = {
     fistName: document.getElementById("fName").value,
     lastName: document.getElementById("lName").value,
     age: parseInt(document.getElementById("userAge").value) || 0,
     phoneNumber: document.getElementById("userPhone").value,
     address: document.getElementById("userAddress").value,
-    schoolName: "PDP", // Buni ham input qilsang bo'ladi
+    schoolName: "PDP",
     gender: document.getElementById("userGender").value,
   };
 
@@ -91,3 +90,8 @@ async function removeUser(id) {
     refresh();
   }
 }
+
+window.handleSave = handleSave;
+window.startEdit = startEdit;
+window.removeUser = removeUser;
+window.resetForm = resetForm;
