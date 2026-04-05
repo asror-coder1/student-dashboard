@@ -54,7 +54,6 @@ function startEdit(id, fName, lName, age, phone, addr, gender) {
   isEditMode = true;
   currentId = id;
 
-  // Inputlarni to'ldirish
   document.getElementById("fName").value = fName;
   document.getElementById("lName").value = lName;
   document.getElementById("userAge").value = age;
